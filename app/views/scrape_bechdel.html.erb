@@ -1,0 +1,10 @@
+<h1>The Bechdel Test</h1>
+
+<% @moviesArray.each do |movie| %>
+  <% if movie.link.include? '/pass' %>
+    <p><font color = "green"><%= movie.title %> - Pass!</p></font>
+    <!-- <p><%= movie.link %></p> -->
+  <% else %>
+    <p><font color = "red"><%= movie.title%> - Fail!</p></font>
+    <% end %>
+<% end %>
